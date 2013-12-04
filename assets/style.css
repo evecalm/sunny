@@ -1,0 +1,108 @@
+body {
+	font-size: 40px;
+	font-family: sans-serif;
+}
+@media screen and (max-width: 800px){
+  body {
+  	font-size: 30px;
+  }
+}
+@media screen and (max-width: 580px){
+  body {
+  	font-size: 20px;
+  }
+}
+@media screen and (max-width: 360px){
+  body {
+  	font-size: 15px;
+  }
+}
+.music-control {
+	position: absolute;
+	cursor: pointer;
+	top: 1em;
+	right: 1em;
+	font-size: 1em;
+	font-weight: 500;
+	color: green;
+}
+.music-control.music-slient {
+	color: red;
+}
+.heart-beat {
+	-webkit-animation: heartbeat 1s infinite;
+}
+.heart {
+	margin: 4.5em auto 3em auto;
+	margin-top: 4.5em;
+	width: 9em;
+	height: 9em;
+	content: '';
+	position: relative;
+	background-color: pink;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.heart:before, .heart:after {
+	position: absolute;
+	content: "";
+	display: block;
+	background-color: pink;
+}
+.heart:before {
+	width: 4.5em;
+	height: 9em;
+	right: 8.9em;
+	border-radius: 4.5em 0 0 4.5em;
+}
+.heart:after {
+	width: 9em;
+	height: 4.5em;
+	top: -4.4em;
+	border-radius: 4.5em 4.5em 0 0;
+}
+.note {
+	text-align: center;
+	cursor: default;
+}
+.note .sunny {
+	color: #EB8A93;
+}
+.note .love {
+	color: red;
+	display: inline-block;
+	cursor: pointer;
+}
+.note .love:hover {
+	-webkit-animation: sheartbeat 1s infinite;
+}
+.note .bunny {
+	color: #6ab8e6;
+}
+.timing {
+	text-align: center;
+	color: #999;
+	font-size: .7em;
+}
+#time-cunt {
+	color: #676767;
+}
+
+@-webkit-keyframes heartbeat {
+    92% { -webkit-transform: rotate(45deg) scale(1, 1);}
+    94% {  -webkit-transform: rotate(45deg) scale(1.2, 1.2); }
+    96% {  -webkit-transform: rotate(45deg) scale(1, 1); }
+    98% {  -webkit-transform: rotate(45deg) scale(1.1, 1.1); }
+    100% { -webkit-transform: rotate(45deg) scale(1, 1);}
+}
+
+@-webkit-keyframes sheartbeat {
+    92% { -webkit-transform: scale(1, 1);}
+    94% {  -webkit-transform: scale(1.2, 1.2); }
+    96% {  -webkit-transform: scale(1, 1); }
+    98% {  -webkit-transform: scale(1.1, 1.1); }
+    100% { -webkit-transform: scale(1, 1);}
+}
