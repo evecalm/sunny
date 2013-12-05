@@ -5,8 +5,8 @@
 		beginTime = new Date(2013,8,21,0,21,12);
 
 	if (!music || !music.canPlayType) {
-		document.body.innerText = 'Please use browser support html5, such as Chrome, Firefox, Safari.'
-		return;
+		document.body.innerText = 'Please use browser supports html5, such as Chrome, Firefox, Safari.'
+		console.log('nono');;
 	}
 
 	musicControl.addEventListener('click',function () {
@@ -43,7 +43,8 @@
 		stamp -= tmp * 60;
 		tmp = stamp;
 		str += tmp + (tmp > 1 ? ' seconds ' : ' second ');
-		timeCount.innerText = str;
+
+		timeCount.innerHTML = str;
 	}
 
 	setInterval(cuntTime, 1000);
