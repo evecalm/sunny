@@ -6,7 +6,7 @@
 
 	if (!music || !music.canPlayType) {
 		document.body.innerText = 'Please use browser supports html5, such as Chrome, Firefox, Safari.'
-		console.log('nono');;
+		return;
 	}
 
 	musicControl.addEventListener('click',function () {
