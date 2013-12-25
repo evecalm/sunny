@@ -5,7 +5,7 @@
 		beginTime = new Date(2013,8,21,0,21,12);
 
 	if (!music || !music.canPlayType) {
-		document.body.innerText = 'Please use browser supports html5, such as Chrome, Firefox, Safari.'
+		document.body.innerText = 'Please use browser supports html5, such as Chrome, Firefox, Safari & Opera.'
 		console.log('nono');;
 	}
 
