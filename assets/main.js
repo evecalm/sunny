@@ -1,6 +1,3 @@
-
-
-
 ;(function (window) {
 	var $ = function (id) {
 			return window.document.getElementById(id);
