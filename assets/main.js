@@ -165,10 +165,10 @@
 		}, 100);
 	}
 
+	typewriter($('notes'));
 	initGarden();
 	startHeartAnimation();
 	cuntTime();
-	typewriter($('notes'));
 	// for mac safari
 	music.play();
 })(window);
