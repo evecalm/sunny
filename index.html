@@ -3,22 +3,40 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
-  <title>Sunny ❤ Bunny</title>
+  <title>Bunny ❤ Sunny</title>
   <link rel="stylesheet" href="./assets/style.css">
-  <script>if (~location.href.indexOf('app.evecalm.com')) location.href = 'http://sunny.evecalm.com'</script>
+  <script>if (~location.href.indexOf('app.evecalm.com')) location.href = 'http://sunny.evecalm.com';</script>
 </head>
 <body>
-  <div id="music-control" class="music-control">Music</div>
+  <div id="content">
+  <div id="music-control" class="playing">&#x34a3;</div>
   <audio id="music" src="./assets/if.mp3" autoplay ></audio>
-  <div class="heart heart-beat"></div>
-  <div class="note">
-    <span class="sunny">Sunny</span>
-    <span class="love">❤</span>
-    <span class="bunny">Bunny</span>
+    <div id="notes">
+        亲爱的秀懿：<br>
+<p>我们于2013年11月22日(周五)相爱(至今{lovetime}天)。</p>
+<p>第一次相见在2013年10月2日(至今{meettime}天)。</p>
+<p>第一次拥抱在2013年11月30日(至今{hugtime}天)。</p>
+<p>第一次亲吻在2013年12月14日(至今{kisstime}天)。</p>
+<p>2014年2月23日晚，因为你母亲的反对，为你不让母亲伤心，你选择和我分手，我不怪你，但是我不接受分手。</p>
+<p>我爱你，我不后悔，我会等你。爱你，我就不怕伤心，也愿意付出。</p>
+<p>也许等到最后，你早已将我忘记，我们走上了陌路。</p>
+<p>只要你随时一句话，我们依旧可以和好如初，等你。</p>
+<p class="wish">秀懿，爱你❤ 祝你幸福！</p>
+    </div>
+    <div id="heart">
+      <canvas id="garden"></canvas>
+      <div id="words">
+        亲爱的，我们已经相爱：
+        <div id="time-count"></div>
+        <div id="love-xiu">
+          <span id="bunny">Bunny</span>
+          <span id="heart-shape" class="heart-beat"></span>
+          <span id="sunny">Sunny</span>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="timing">
-    We've met <span id="time-cunt"> counting... </span>.
-  </div>
+  <script src="./assets/garden.js"></script>
   <script src="./assets/main.js"></script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
