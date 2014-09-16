@@ -5,6 +5,11 @@
     url('./font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url('./font/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
 }
+html {
+	-webkit-filter: grayscale(100%);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+	filter: grayscale(100%);
+}
 body {
 	background-color: #ffe;
 	font-family: 'Century Gothic','Microsoft YaHei', Avenir,Verdana;
@@ -112,9 +117,9 @@ body {
 }
 
 .heart-beat {
-	-webkit-animation: heartbeat 1s infinite;
+	/*-webkit-animation: heartbeat 1s infinite;
 	-moz-animation: heartbeat 1s infinite;
-	animation: heartbeat 1s infinite;
+	animation: heartbeat 1s infinite;*/
 }
 
 #heart-shape {

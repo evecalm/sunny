@@ -86,7 +86,7 @@
 	function _cuntTime (beginTime, timeCount) {
 		var str = '',
 			tmp = 0,
-			stamp = (+new Date()) - beginTime;
+			stamp = new Date(2014,4,12,23,30) - beginTime;
 		stamp = Math.floor(stamp / 1000);
 		tmp = Math.floor(stamp / (60 * 60 * 24));
 		str += tmp + '<span>' + (tmp > 1 ? ' days ' : ' day ') + '</span>';
@@ -109,7 +109,8 @@
 	function cuntTime () {
 		var beginTime = new Date(2013,10,22,21,10,12),
 			timeCount = $('time-count');
-		setInterval(_cuntTime, 1000,beginTime,timeCount);
+		_cuntTime(beginTime,timeCount);
+		// setInterval(_cuntTime, 1000,beginTime,timeCount);
 	}
 
 	function showMessage () {
@@ -149,8 +150,9 @@
 	}
 
 	function typewriter (el) {
-		var str = memorialDay(el.innerHTML), progress = 0, timer;
+		var str = el.innerHTML, progress = 0, timer;
 		el.innerHTML = '';
+		el.style.display = 'block';
 		timer = setInterval(function() {
 			var current = str.substr(progress, 1);
 			if (current == '<') {
