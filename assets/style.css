@@ -1,0 +1,176 @@
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	margin: 0;
+  	padding: 0;
+	color: #333;
+	width: 100%;
+	height: 100%;
+  /* background-color: whitesmoke; */
+}
+
+
+#music-control {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-family:"iconfont";
+	font-style:normal;
+	font-size: 22px;
+	z-index: 999;
+	cursor: pointer;
+}
+#music-control.over {
+	color: black;
+}
+#music-control.loading {
+	color: #f07524;
+}
+#music-control.playing {
+	color: red;
+	cursor: pointer;
+}
+#music-control.stop {
+	color: grey;
+}
+#music {
+	display: none;
+}
+
+
+
+.bg {
+	position: fixed;
+	content: ' ';
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	pointer-events: none;
+	background-image: url(./sunny-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	background-size: cover;
+	filter: blur(4px);
+}
+
+.love-bubbles {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+
+.count-down {
+  text-align: left;
+  /* font-size: 2em; */
+  color: #efefef;
+  line-height: 2;
+	width: 600px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.time-count {
+  font-size: 2.5em;
+  text-align: center;
+}
+.time-count span {
+  font-size: .6em;
+  color: #ccc;
+}
+
+
+#love-xiu {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#bunny {
+	color: lightblue;
+}
+#sunny {
+	color: #d00;
+}
+
+@media (max-width: 600px) {
+	.count-down {
+		font-size: .8em;
+		width: auto;
+		margin-left: 10px;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+		left: 0;
+		transform: translateY(-50%);
+	}
+
+	.time-count {
+		font-size: 1.4em;
+	}
+
+	#love-xiu {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.heart-beat {
+	animation: heartbeat 1s infinite;
+}
+
+#heart-shape {
+	font-size: 1.3px;
+	margin: 4.5em 1em 3em;
+	margin-top: 4.5em;
+	width: 9em;
+	height: 9em;
+	content: '';
+	position: relative;
+	display: inline-block;
+	background-color: pink;
+	transform: rotate(45deg);
+}
+#heart-shape:before, #heart-shape:after {
+	position: absolute;
+	content: "";
+	display: block;
+	background-color: pink;
+}
+
+#heart-shape:before {
+	width: 4.5em;
+	height: 9em;
+	right: 8.9em;
+	border-radius: 4.5em 0 0 4.5em;
+}
+#heart-shape:after {
+	width: 9em;
+	height: 4.5em;
+	top: -4.4em;
+	border-radius: 4.5em 4.5em 0 0;
+}
+
+@keyframes heartbeat {
+    92% { transform: rotate(45deg) scale(1, 1);}
+    94% {  transform: rotate(45deg) scale(1.2, 1.2); }
+    96% {  transform: rotate(45deg) scale(1, 1); }
+    98% {  transform: rotate(45deg) scale(1.1, 1.1); }
+    100% { transform: rotate(45deg) scale(1, 1);}
+}
+
+.tip {
+	font-size: .8em;
+	text-align: center;
+	color: #bbb;
+}

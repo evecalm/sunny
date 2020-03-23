@@ -5,8 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bunny ❤ Sunny</title>
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-  <h1 style="text-align: center;">To be continued...</h1>
+  <div id="music-control" class="playing">♬</div>
+  <div class="bg"></div>
+  <audio id="music" src="./assets/if.mp3" autoplay></audio>
+  <canvas id="cavs" class="love-bubbles"></canvas>
+  <div class="count-down">
+    My darling, we have been falling in love for
+    <div class="time-count" id="time-count">
+      171<span> days </span>2<span> hours </span>19<span> minutes </span>48<span> seconds </span>
+    </div>
+    <div id="love-xiu">
+      <span id="bunny">Bunny</span>
+      <span id="heart-shape" class="heart-beat"></span>
+      <span id="sunny">Sunny</span>
+    </div>
+
+    <div class="tip">
+      We restarted at 2019/4/7 1:02:12 GMT+8
+    </div>
+  </div>
+  <script src="./assets/common.js"></script>
+  <script src="./assets/main.js"></script>
 </body>
 </html>
