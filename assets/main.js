@@ -10,7 +10,6 @@ musicControl.addEventListener('click',function () {
   }
 })
 
-
 music.addEventListener('play',function () {
   musicControl.className = 'playing'
 })
@@ -22,6 +21,12 @@ music.addEventListener('pause',function () {
 music.addEventListener('error',function () {
   musicControl.className = 'stop'
 })
+
+function forceAutoPlay() {
+  if (music.paused) music.play()
+  document.body.removeEventListener('click', forceAutoPlay)
+}
+document.body.addEventListener('click', forceAutoPlay, true)
 
 var STARTED_AT = new Date('2019/4/7 1:02:12 GMT+8')
 
@@ -44,7 +49,6 @@ function countOn() {
 function init() {
   countOn()
   setInterval(countOn, 500)
-  music.play()
   new Board(Love).run()
 }
 
